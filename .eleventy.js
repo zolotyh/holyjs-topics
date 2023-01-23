@@ -9,6 +9,7 @@ const markdownItAnchor = require("markdown-it-anchor");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
+const getEnv = require("./src/_data/env.js");
 
 const { DateTime } = require("luxon");
 
@@ -106,10 +107,9 @@ module.exports = function (eleventyConfig) {
 
   return {
     templateFormats: ["md", "njk", "html", "liquid"],
-    pathPrefix: "/",
+    pathPrefix: getEnv().baseUrl,
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
-
     dir: {
       input: "src",
       output: "docs",
