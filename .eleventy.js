@@ -1,10 +1,10 @@
 const htmlmin = require("html-minifier");
 const cleanCSS = require("clean-css");
-const { cache } = require('eleventy-plugin-workbox');
+const { cache } = require("eleventy-plugin-workbox");
 const { compress } = require("eleventy-plugin-compress");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addFilter("cssmin", function(code) {
+  eleventyConfig.addFilter("cssmin", function (code) {
     return new cleanCSS({}).minify(code).styles;
   });
 
@@ -32,7 +32,7 @@ module.exports = function (eleventyConfig) {
   return {
     dir: {
       input: "src",
-      output: "dist",
+      output: "docs",
       includes: "_includes",
       layouts: "_layouts",
     },
