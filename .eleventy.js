@@ -16,8 +16,6 @@ const { DateTime } = require("luxon");
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./node_modules/alpinejs/dist/cdn.min.js": "./assets/js/alpine.js",
-    "./node_modules/prismjs/themes/prism-okaidia.min.css":
-      "./assets/css/prism-okaidia.min.css",
     "./src/assets/fonts/*": "./assets/fonts",
     "./src/assets/img/posts/*": "./assets/img/posts",
     "./src/assets/img/*": "./assets/img",
@@ -112,7 +110,7 @@ module.exports = function (eleventyConfig) {
     htmlTemplateEngine: "njk",
     dir: {
       input: "src",
-      output: "docs",
+      output: "_site",
       data: "_data",
       includes: "_includes",
       layouts: "_layouts",
