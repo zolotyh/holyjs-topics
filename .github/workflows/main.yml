@@ -8,23 +8,15 @@ on:
 jobs:
   runs-on: ubuntu-latest
   build:
-    strategy:
-      matrix:
-        node-version: [18.x]
-
     steps:
       - uses: actions/checkout@v3
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Install dependencies & build
-        run: |
-          npm ci
-          npm run build          
-
+          node-version: 18
+          cache: 'npm'
+          cache-dependency-path: subdir/package-lock.json
+      - run: npm ci
+      - run: npm build
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v1.0.7
         with:
