@@ -1,43 +1,47 @@
+{% set postslist = collections.posts | head(-3) %}
+{% set postslistCounter = collections.posts | length %}
+
 <div class="mx-auto flex flex-wrap flex-col md:flex-row items-center">
+  {% for post in postslist | reverse %}
   <div class="w-full md:w-8/12 lg:w-6/12 xl:w-4/12">
     <div class="single_blog mx-3 mt-8 rounded-xl bg-white transition-all duration-300 overflow-hidden hover:shadow-lg">
       <div>
         <img src="assets/img/posts/JavaScript-logo.png" alt="blog" class="w-full">
       </div>
       <div class="px-4 py-5">
-        <ul class="flex justify-between">
-          <li class="text-sm md:text-base">By: <a href="#"
-              class="hover:text-theme-color">Musharof Chowdury</a></li>
-          <li class="text-sm md:text-base">15 June 2024</li>
-        </ul>
-
-        <h3 class="blog_title"><a href="#">How to track your business revenue</a></h3>
+        <h3 class="text-lg font-bold">
+          {% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}
+        </h3>
+        {% if post.data.description %}
+        <p>
+          {{ post.data.description }}
+        </p>
+        {% endif %}
         <div class="text-center">
-        <a href="/" class="
-                   mx-auto 
-                   inline-block 
-                   lg:mx-0 
-                   hover:underline 
-                   bg-fuchsia-700 text-gray-100
-                   hover:no-underline 
-                   font-bold 
-                   rounded-full
-                   my-6 
-                   py-3
-                   px-5
-                   text-md
-                   shadow-lg 
-                   focus:outline-none 
-                   focus:shadow-outline 
-                   transform transition 
-                   hover:scale-105 
-                   duration-300 ease-in-out">
-          Подробнее
-        </a>
+          <a href="{{ post.url | url }}" class="
+                     mx-auto 
+                     inline-block 
+                     lg:mx-0 
+                     hover:underline 
+                     bg-fuchsia-700 text-gray-100
+                     hover:no-underline 
+                     font-bold 
+                     rounded-full
+                     my-6 
+                     py-3
+                     px-5
+                     text-md
+                     shadow-lg 
+                     focus:outline-none 
+                     focus:shadow-outline 
+                     transform transition 
+                     hover:scale-105 
+                     duration-300 ease-in-out">
+            Подробнее
+          </a>
         </div>
-
       </div>
     </div> <!-- row -->
   </div>
+  {% endfor %}
 </div> <!-- row -->
-

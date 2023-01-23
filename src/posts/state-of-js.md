@@ -1,9 +1,8 @@
 ---
-title: Состояние JS
-description: This is a post on My Blog about agile frameworks.
-date: 2018-05-01
+title: Что нового в JS в 2023
+description: Доклад о состоянии ECMAScript, о новых пропоузалах и станартах
 tags:
-  - another tag
+  - js
 layout: base.njk
 ---
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
