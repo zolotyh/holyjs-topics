@@ -16,7 +16,7 @@ jobs:
           cache: 'npm'
           cache-dependency-path: package-lock.json
       - run: npm ci
-      - run: npm build
+      - run: npm run build
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v1.0.7
         with:
