@@ -4,7 +4,6 @@ const { cache } = require("eleventy-plugin-workbox");
 const { compress } = require("eleventy-plugin-compress");
 
 const markdownIt = require("markdown-it");
-const markdownItAnchor = require("markdown-it-anchor");
 
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -19,6 +18,7 @@ module.exports = function (eleventyConfig) {
     "./src/assets/fonts/*": "./assets/fonts",
     "./src/assets/img/posts/*": "./assets/img/posts",
     "./src/assets/img/*": "./assets/img",
+    "./src/assets/js/*": "./assets/js",
   });
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
@@ -37,7 +37,9 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addPlugin(compress, { enabled: true });
-  eleventyConfig.addPlugin(cache);
+  eleventyConfig.addPlugin(cache, {
+    publicDirectory: getEnv().baseUrl,
+  });
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
@@ -80,15 +82,8 @@ module.exports = function (eleventyConfig) {
   const markdownLibrary = markdownIt({
     html: true,
     linkify: true,
-  }).use(markdownItAnchor, {
-    permalink: markdownItAnchor.permalink.ariaHidden({
-      placement: "after",
-      class: "direct-link",
-      symbol: "#",
-    }),
-    level: [1, 2, 3, 4],
-    slugify: eleventyConfig.getFilter("slugify"),
   });
+
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   eleventyConfig.addTransform("htmlmin", (content, outputPath) => {

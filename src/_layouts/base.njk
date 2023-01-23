@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <link rel=preconnect href="https://holyjs.ru/">
   <base href="{{env.baseUrl}}">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +29,10 @@ background: linear-gradient(90deg, rgba(5,11,17,1) 0%, rgba(165,55,154,1) 41%, r
   {% include "header.njk" %}
   {% include "body.njk" %}
   {% include "footer.njk" %}
+
+  <script class=js-additional fetchpriority=low delay="assets/js/instantpage.js" type=module defer></script>
+  <script>const autoLoadDuration = 5, eventList = ["keydown", "mousemove", "wheel", "touchmove", "touchstart", "touchend"], autoLoadTimeout = setTimeout(runScripts, 5e3); function triggerScripts() {runScripts(), clearTimeout(autoLoadTimeout), eventList.forEach(function (a) {window.removeEventListener(a, triggerScripts, {passive: !0})})} function runScripts() {document.querySelectorAll("script[delay]").forEach(function (a) {a.setAttribute("src", a.getAttribute("delay"))})} const params = new URLSearchParams(window.location.search); params.get('coupon') ? runScripts() : eventList.forEach(function (a) {window.addEventListener(a, triggerScripts, {passive: !0})})</script>
+
 </body>
 
 </html>

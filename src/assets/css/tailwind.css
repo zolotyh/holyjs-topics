@@ -2,3 +2,23 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import "prismjs/themes/prism-okaidia.min.css";
+
+h2 {
+  @apply text-4xl mb-10;
+}
+
+p {
+  @apply text-lg mb-6;
+}
+
+ul {
+  @apply list-disc text-lg pl-4
+}
+
+ul ul {
+  @apply pl-10 pt-2 pb-4
+}
+
+* + h2 {
+  @apply mt-14;
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://example.com/assets/css/style.css</loc>
+    <lastmod>2023-01-23</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/</loc>
+    <lastmod>2023-01-23</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/topics/01_state-of-js/</loc>
+    <lastmod>2023-01-23</lastmod>
+  </url>
+</urlset>
