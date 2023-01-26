@@ -9,7 +9,7 @@ tags:
   - tc39
   - proposals
 
-layout: base.njk
+layout: './post.njk'
 ---
 
 ## Описание
