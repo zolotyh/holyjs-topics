@@ -1,8 +1,8 @@
 <div class="w-full md:w-8/12 lg:w-6/12 xl:w-4/12">
   <div class="single_blog mx-3 mt-8 rounded-xl bg-white transition-all duration-300 overflow-hidden hover:shadow-lg">
-    <div>
-      <img src="assets/img/posts/JavaScript-logo.png" alt="blog" class="w-full">
-    </div>
+    <a class="block" href="{{ topic.url | url}}">
+      <img src="{{ topic.data.image }}" alt="blog" class="w-full">
+    </a>
     <div class="px-4 py-5">
       <h3 class="text-lg font-bold">
         {% if topic.data.title %}{{ topic.data.title }}{% else %}<code>{{ topic.url }}</code>{% endif %}

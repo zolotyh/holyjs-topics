@@ -14,7 +14,9 @@
     {{ css | cssmin | safe }}
   </style>
   <link rel="stylesheet" href="{{ 'assets/css/tailwind.css' | url }}">
-  <title>{{ title }}</title>
+  <title>
+    HolyJS. Темы на заказ. {{ title }}
+  </title>
   <script defer src="{{ 'assets/js/alpine.js' | url }}"></script>
   <style>
       .gradient {
@@ -27,7 +29,13 @@ background: linear-gradient(90deg, rgba(5,11,17,1) 0%, rgba(165,55,154,1) 41%, r
 
 <body class="leading-normal tracking-normal text-white gradient">
   {% include "header.njk" %}
-  {% include "body.njk" %}
+  <section class="bg-white border-b py-8 text-slate-800">
+    <div class="container max-w-5xl mx-auto m-8">
+      {% block main %}
+        {{ content | safe }}
+      {% endblock %}
+    </div>
+  </section>
   {% include "footer.njk" %}
 
   <script class=js-additional fetchpriority=low delay="assets/js/instantpage.js" type=module defer></script>

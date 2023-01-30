@@ -1,7 +1,9 @@
 {% extends "./base.njk" %}
 
-<div class="posts">
-    {% block main %}
-      {{ content | safe }}
-    {% endblock %}
-</div>
+{% block main %}
+<h1 class="text-4xl pb-2">
+   {{ title }}
+</h1>
+
+  {{ content | safe }}
+{% endblock %}

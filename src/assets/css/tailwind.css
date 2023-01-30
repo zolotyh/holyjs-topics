@@ -4,7 +4,7 @@
 @import "prismjs/themes/prism-okaidia.min.css";
 
 h2 {
-  @apply text-4xl mb-10;
+  @apply text-3xl mb-5;
 }
 
 p {
@@ -21,4 +21,8 @@ ul ul {
 
 * + h2 {
   @apply mt-14;
+}
+
+h1 + h2 {
+  @apply mt-5;
 }
