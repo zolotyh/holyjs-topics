@@ -2,6 +2,7 @@
 title: Island архитектура
 description: Доклад о состоянии ECMAScript, о новых пропоузалах и станартах
 image: "assets/img/posts/astro-logo.svg"
+published: false
 
 tags:
   - js
@@ -9,7 +10,7 @@ tags:
   - tc39
   - proposals
 
-layout: './post.njk'
+layout: './topic.njk'
 ---
 
 ## Описание

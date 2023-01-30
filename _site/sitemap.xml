@@ -12,12 +12,12 @@
   </url>
   
   <url>
-    <loc>https://example.com/topics/01_state-of-js/</loc>
-    <lastmod>2023-01-25</lastmod>
+    <loc>https://example.com/topics/02_island_architecture/</loc>
+    <lastmod>2023-01-30</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/topics/02_island_architecture/</loc>
+    <loc>https://example.com/topics/01_state-of-js/</loc>
     <lastmod>2023-01-30</lastmod>
   </url>
 </urlset>

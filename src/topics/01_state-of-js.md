@@ -1,7 +1,8 @@
 ---
 title: Что нового в JS
 description: Доклад о состоянии ECMAScript, о новых пропоузалах и станартах
-image: "assets/img/posts/JavaScript-logo.png"
+image: "assets/img/posts/js-logo.svg"
+published: true
 
 tags:
   - js
@@ -9,7 +10,7 @@ tags:
   - tc39
   - proposals
 
-layout: './post.njk'
+layout: './topic.njk'
 ---
 
 ## Описание

@@ -1,0 +1,13 @@
+{% extends "./base.njk" %}
+
+{% block main %}
+  <h1 class="text-4xl pb-2">
+     {{ title }}
+  </h1>
+  {{ content | safe }}
+  <div class="text-center">
+    <a href="{{ env.baseUrl }}" class="mx-auto hover:no-underline inline-block lg:mx-0 hover:underline bg-slate-700 text-slate-100 rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+      Ко всем докладам
+    </a>
+  </div>
+{% endblock %}
