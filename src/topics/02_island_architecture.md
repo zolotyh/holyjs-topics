@@ -1,6 +1,6 @@
 ---
 title: Island архитектура
-description: Доклад о состоянии ECMAScript, о новых пропоузалах и станартах
+description: Доклад про архитектурный шаблон Island architecture и его имплементации Astro 2.
 image: "assets/img/posts/astro-logo.svg"
 published: false
 

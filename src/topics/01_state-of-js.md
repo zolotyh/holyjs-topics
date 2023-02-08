@@ -3,6 +3,7 @@ title: Что нового в JS
 description: Доклад о состоянии ECMAScript, о новых пропоузалах и станартах
 image: "assets/img/posts/js-logo.svg"
 published: true
+inProgress: true
 
 tags:
   - js
