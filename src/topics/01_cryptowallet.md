@@ -1,9 +1,9 @@
 ---
 title: Пишем кошелёк для криптовалюты на JavaScript
 description: Гайд по разработке собственного криптокошелька на JS
-image: ""
+image: "assets/img/posts/js-logo.svg"
 published: true
-inProgress: true
+inProgress: false
 
 tags:
   - js
