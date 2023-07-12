@@ -1,7 +1,7 @@
-{% set topics = collections.topics | head(-3) %}
+{% set topics = collections.topics | head(-30) %}
 {% set topicsCounter = collections.topics | length %}
 
-<div class="mx-auto flex flex-wrap flex-col md:flex-row items-center">
+<div class="mx-auto flex flex-wrap flex-col md:flex-row items-start">
   {% for topic in topics | reverse %}
     {% include "topic.njk" %}
   {% endfor %}
